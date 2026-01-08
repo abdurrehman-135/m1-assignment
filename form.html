@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Adoption Inquiry Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+  <h1>Pet Adoption Inquiry Form</h1>
+
+  <nav>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="adopt.html">Adopt a Pet</a></li>
+    <li><a href="form.html">Adoption Form</a></li>
+  </nav>
+
+  <p>Please fill out the form below to start the adoption process. A volunteer will contact you within 48 hours.</p>
+
+  <form action="/signup" method="post">
+    <fieldset>
+      <legend>Adoption Inquiry Details</legend>
+      <label for="fullname">Full Name</label>
+      <input type="text" name="fullname" required><br>
+
+      <label for="email">Email Address</label>
+      <input type="email" name="email" required><br>
+
+      <label for="phone">Phone Number</label>
+      <input type="tel"  name="phone"><br>
+
+      <label for="pet">Which pet are you interested in?</label>
+      <select  name="pet">
+        <option value="">-- Select a pet --</option>
+        <option value="Buddy">Buddy (Dog)</option>
+        <option value="Luna">Luna (Cat)</option>
+        <option value="Flop">Flop (Rabbit)</option>
+      </select><br>
+
+      <label for="housing">Type of Housing</label>
+      <select  name="housing">
+        <option value="apartment">Apartment</option>
+        <option value="house">House</option>
+        <option value="other">Other</option>
+      </select><br>
+
+      <label for="message">Why would you like to adopt?</label>
+      <textarea name="message" rows="4"></textarea><br>
+
+      <label>
+        <input type="checkbox" name="agreement" required>
+        I confirm that the information provided is accurate.
+      </label><br>
+
+      <button type="submit">Submit Inquiry</button>
+    </fieldset>
+  </form>
+
+  <footer style="margin-top:20px;">
+    <p>Questions? Email us at <a href="mailto:adopt@pawsandneighbors.org">adopt@pawsandneighbors.org</a></p>
+  </footer>
+
+</body>
+</html>
