@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Contact Us - Paws & Neighbors</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="Css/style.css" />
+    <style>
+      .hidden-input {
+        display: none;
+      }
+      .visible-input {
+        display: block;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img src="images/logo.png" alt="Paws & Neighbors logo" />
+      <div>
+        <h1>Paws & Neighbors</h1>
+        <p>Helping local pets find loving homes.</p>
+      </div>
+    </header>
+
+    <nav>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="adopt.html">Adopt a Pet</a></li>
+      <li><a href="form.html">Adoption Form</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li>
+        <a href="https://en.wikipedia.org/wiki/Animal_adoption" target="_blank"
+          >About Adoption (research)</a
+        >
+      </li>
+    </nav>
+
+    <h1>Contact Us</h1>
+
+    <p>
+      Please select a topic below and fill out the form. We will get back to you
+      as soon as possible.
+    </p>
+
+    <form action="/contact" method="post">
+      <fieldset>
+        <legend>Contact Form</legend>
+
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" required /><br />
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required /><br />
+
+        <label for="topic">Select Topic</label>
+        <select id="topic" name="topic">
+          <option value="">-- Please select a topic --</option>
+          <option id="opt-adoption" value="adoption">Adoption Inquiry</option>
+          <option id="opt-volunteer" value="volunteer">
+            Volunteer Opportunities
+          </option>
+          <option id="opt-donate" value="donate">Donation Questions</option>
+          <option id="opt-general" value="general">
+            General Questions
+          </option></select
+        ><br />
+
+        <!-- Dynamic input boxes - only one visible at a time -->
+        <div id="input-adoption" class="hidden-input">
+          <label for="pet-interest"
+            >Which pet are you interested in adopting?</label
+          >
+          <input
+            type="text"
+            id="pet-interest"
+            name="pet-interest"
+            placeholder="e.g., Buddy, Luna, or any"
+          /><br />
+        </div>
+
+        <div id="input-volunteer" class="hidden-input">
+          <label for="volunteer-area"
+            >What area would you like to volunteer in?</label
+          >
+          <input
+            type="text"
+            id="volunteer-area"
+            name="volunteer-area"
+            placeholder="e.g., dog walking, fostering, events"
+          /><br />
+        </div>
+
+        <div id="input-donate" class="hidden-input">
+          <label for="donation-type"
+            >What type of donation are you considering?</label
+          >
+          <input
+            type="text"
+            id="donation-type"
+            name="donation-type"
+            placeholder="e.g., monetary, supplies, food"
+          /><br />
+        </div>
+
+        <div id="input-general" class="hidden-input">
+          <label for="subject">Subject</label>
+          <input
+            type="text"
+            id="subject"
+            name="subject"
+            placeholder="Brief subject of your inquiry"
+          /><br />
+        </div>
+
+        <label for="message">Your Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea
+        ><br />
+
+        <button type="submit">Send Message</button>
+      </fieldset>
+    </form>
+
+    <footer style="margin-top: 20px">
+      <p>
+        Questions? Email us at
+        <a href="mailto:info@pawsandneighbors.org">info@pawsandneighbors.org</a>
+      </p>
+      <p>Address: 123 Community Lane</p>
+    </footer>
+
+    <script src="js/contact.js"></script>
+  </body>
+</html>
